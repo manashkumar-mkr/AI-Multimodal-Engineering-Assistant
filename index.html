@@ -209,24 +209,28 @@
 
 
     <script>
-
         function sendMessage() {
 
-            const input = document.getElementById("userInput");
-            const response = document.getElementById("response");
+    const input = document.getElementById("userInput");
+    const response = document.getElementById("response");
 
-            const message = input.value.trim();
+    const message = input.value.trim();
 
-            if (message === "") {
-                return;
-            }
+    if (message === "") {
+        return;
+    }
 
-            response.style.display = "block";
+    response.style.display = "block";
 
-            response.innerHTML =
-                "🤖 Your AI assistant will answer here. AI connection will be added in the next stages.";
+    response.innerHTML = `
+        <strong>You:</strong><br>
+        ${message}
+        <br><br>
+        <strong>🤖 AI Engineering Assistant:</strong><br>
+        I received your message. My AI brain will be connected in the next stage!
+    `;
 
-            input.value = "";
+    input.value = "";
         }
 
     </script>
